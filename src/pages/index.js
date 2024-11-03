@@ -24,39 +24,80 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Bio />
-      <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
-          const title = post.frontmatter.title || post.fields.slug
+      							{/* <!-- Banner --> */}
+                    <section id="banner">
+									<div className="content">
+										<header> 
+											<h2>Welcome!</h2>
+											<p>Helping citizens understand what is going on in Springville City</p>
+										</header>
+										<p>I created this website to give citizens a clear, accessible view of what’s happening in our city government. Like many of you, I've often found it challenging to keep up with local decisions, policies, and projects that directly impact our lives. Springville Transparency is here to break down complex issues, provide straightforward summaries of meetings and initiatives, and give everyone an easy way to stay informed and engaged with the city government. This is your go-to resource for staying up-to-date and making sure your voice is heard in Springville.</p>
+										<ul className="actions">
+											<li><a href="#" className="button big">Learn More</a></li>
+										</ul>
+									</div>
+									<span className="image object">
+										<img src="images/pic10.jpg" alt="" />
+									</span>
+								</section>
 
-          return (
-            <li key={post.fields.slug}>
-              <article
-                className="post-list-item"
-                itemScope
-                itemType="http://schema.org/Article"
-              >
-                <header>
-                  <h2>
-                    <Link to={post.fields.slug} itemProp="url">
-                      <span itemProp="headline">{title}</span>
-                    </Link>
-                  </h2>
-                  <small>{post.frontmatter.date}</small>
-                </header>
-                <section>
-                  <p
-                    dangerouslySetInnerHTML={{
-                      __html: post.frontmatter.description || post.excerpt,
-                    }}
-                    itemProp="description"
-                  />
-                </section>
-              </article>
-            </li>
-          )
-        })}
-      </ol>
+
+							{/* <!-- Section --> */}
+								<section>
+									<header className="major">
+										<h2>Past Council Meetings</h2>
+									</header>
+									<div className="posts">
+										<article>
+											<a href="#" className="image"><img src="images/pic01.jpg" alt="" /></a>
+											<h3>October 1st Council</h3>
+											<p>The main agenda item was the impact fee study presented by Jason Miller, which proposed an 89% increase in commercial impact fees to align with other local cities, shifting the financial burden of new developments off current residents. After discussion and a public hearing, the council unanimously approved the fee increase.</p>
+											<ul className="actions">
+												<li><a href="10-1council.html" className="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" className="image"><img src="images/pic02.jpg" alt="" /></a>
+											<h3>Nulla amet dolore</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul className="actions">
+												<li><a href="#" className="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" className="image"><img src="images/pic03.jpg" alt="" /></a>
+											<h3>Tempus ullamcorper</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul className="actions">
+												<li><a href="#" className="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" className="image"><img src="images/pic04.jpg" alt="" /></a>
+											<h3>Sed etiam facilis</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul className="actions">
+												<li><a href="#" className="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" className="image"><img src="images/pic05.jpg" alt="" /></a>
+											<h3>Feugiat lorem aenean</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul className="actions">
+												<li><a href="#" className="button">More</a></li>
+											</ul>
+										</article>
+										<article>
+											<a href="#" className="image"><img src="images/pic06.jpg" alt="" /></a>
+											<h3>Amet varius aliquam</h3>
+											<p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+											<ul className="actions">
+												<li><a href="#" className="button">More</a></li>
+											</ul>
+										</article>
+									</div>
+								</section>
     </Layout>
   )
 }
