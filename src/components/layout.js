@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 import { Link, Script } from "gatsby"
 import "../sass/main.scss"
 
@@ -6,6 +7,8 @@ const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
+
+  const [loaded, setLoaded] = useState(false)
 
   if (isRootPath) {
     header = (
@@ -87,11 +90,13 @@ const Layout = ({ location, title, children }) => {
 						</div>
 					</div>
 
-          <Script strategy="idle" src="/js/jquery.min.js"></Script>
+          <Script strategy="idle" src="/js/jquery.min.js" onLoad={() => setLoaded(true)}></Script>
           <Script strategy="idle" src="/js/browser.min.js"></Script>
           <Script strategy="idle" src="/js/breakpoints.min.js"></Script>
-          <Script strategy="idle" src="/js/util.js"></Script>
-          <Script strategy="idle" src="/js/main.js"></Script>
+          {loaded && <Script strategy="idle" src="/js/util.js" />}
+          {loaded && <Script strategy="idle" src="/js/main.js" />}
+          
+          
 
 			</div>
   )
