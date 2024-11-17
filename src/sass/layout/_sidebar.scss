@@ -121,7 +121,7 @@
 		@include breakpoint('<=xlarge') {
 			$pad: 1.5em / 0.9;
 
-			width: _size(sidebar-width-alt);
+			width: _size(sidebar-width);
 
 			> .inner {
 				@include padding($pad, $pad, (0, 0, $pad, 0));
