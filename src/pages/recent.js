@@ -13,6 +13,8 @@ import { Link, graphql } from "gatsby"
 import Seo from "../components/seo"
 
 export default function Blog(props) {
+
+
 	return (
 	  <AppTheme {...props}>
 		<CssBaseline enableColorScheme />

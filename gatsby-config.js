@@ -54,7 +54,6 @@ module.exports = {
           },
           `gatsby-remark-prismjs`,
           `gatsby-plugin-decap-cms`,
-          `gatsby-plugin-sass`,
         ],
       },
     },

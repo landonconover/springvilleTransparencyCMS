@@ -8,3 +8,11 @@
 
 // Highlighting for code blocks
 import "prismjs/themes/prism.css"
+
+export const shouldUpdateScroll = ({ routerProps: { location }, getSavedScrollPosition }) => {
+    const currentPosition = getSavedScrollPosition(location);
+    setTimeout(() => {
+    window.scrollTo(...(currentPosition || [0, 0]));
+    }, 0);
+    return false;
+    };
