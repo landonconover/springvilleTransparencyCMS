@@ -112,7 +112,7 @@ export default function AppAppBar() {
                 Home
               </Button>
 
-              <Button variant="text" color="info" size="small" onClick={handleClick} endIcon={<KeyboardArrowDownIcon />}>
+              <Button variant="text" color="info" size="small" onClick={handleClick} endIcon={<KeyboardArrowDownIcon />} sx={{ color: 'info.main' }}>
                 Past Meetings
               </Button>
 

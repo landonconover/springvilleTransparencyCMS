@@ -24,14 +24,14 @@ export default function Index(props) {
 		  <AppAppBar />
 		  <Hero />
 		  <div>
-			<LogoCollection />
-			<Features />
-			<Divider />
-			<Testimonials />
-			<Divider />
-			<Highlights />
-			<Divider />
-			<Pricing />
+			{/* <LogoCollection /> */}
+			{/* <Features /> */}
+			{/* <Divider /> */}
+			{/* <Testimonials /> */}
+			{/* <Divider /> */}
+			{/* <Highlights /> */}
+			{/* <Divider /> */}
+			{/* <Pricing /> */}
 			<Divider />
 			<FAQ />
 			<Divider />
