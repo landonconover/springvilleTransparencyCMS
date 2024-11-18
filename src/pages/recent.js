@@ -1,44 +1,33 @@
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
-import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
 import AppAppBar from '../components/AppAppBar';
-import Hero from '../components/Hero';
-import LogoCollection from '../components/LogoCollection';
-import Highlights from '../components/Highlights';
-import Pricing from '../components/Pricing';
-import Features from '../components/Features';
-import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
+import MainContent from '../components/MainContent';
+import Latest from '../components/Latest';
 import Footer from '../components/Footer';
 import AppTheme from '../shared-theme/AppTheme';
-import { Link, graphql } from "gatsby" 
+import { Link, graphql } from "gatsby"
 
 // import Bio from "../components/bio"
 // import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-export default function Index(props) {
+export default function Blog(props) {
 	return (
-		<AppTheme {...props}>
-		  <CssBaseline enableColorScheme />
-		  <AppAppBar />
-		  <Hero />
-		  <div>
-			<LogoCollection />
-			<Features />
-			<Divider />
-			<Testimonials />
-			<Divider />
-			<Highlights />
-			<Divider />
-			<Pricing />
-			<Divider />
-			<FAQ />
-			<Divider />
-			<Footer />
-		  </div>
-		</AppTheme>
-	  );
+	  <AppTheme {...props}>
+		<CssBaseline enableColorScheme />
+		<AppAppBar />
+		<Container
+		  maxWidth="lg"
+		  component="main"
+		  sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}
+		>
+		  <MainContent />
+		  <Latest />
+		</Container>
+		<Footer />
+	  </AppTheme>
+	);
   }
 
 // const BlogIndex = ({ data, location }) => {
